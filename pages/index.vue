@@ -1,5 +1,11 @@
 <template>
-  <div>AirBnb</div>
+  <div>
+    <Banner />
+    <main class="space-y-14">
+      <NearLocations />
+      <HouseTypes />
+    </main>
+  </div>
 </template>
 
 <script>
