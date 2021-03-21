@@ -2,20 +2,21 @@
   <section class="container mx-auto my-5 px-5">
     <p class="text-3xl font-bold ">Una casa ovunque nel mondo</p>
     <div class="my-5 lg:flex gap-4 justify-between grid grid-cols-2">
-      <HomeHouseTypeCard
+      <BigCard
         v-for="house in houses"
         :key="house.type"
         :type="house.type"
         :image="house.img"
+        :subtitle="''"
       />
     </div>
   </section>
 </template>
 
 <script>
-import HouseTypeCard from '@/components/Home/HouseTypeCard';
+import BigCard from '@/components/Home/BigCard';
 export default {
-  components: { HouseTypeCard },
+  components: { BigCard },
   data() {
     return {
       houses: [
