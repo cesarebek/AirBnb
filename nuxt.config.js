@@ -11,7 +11,7 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: ['~/assets/scss/tailwind.scss'],
+  css: ['~/assets/scss/tailwind.scss', 'hooper/dist/hooper.css'],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: ['~/plugins/hooper.client.js'],

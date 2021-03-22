@@ -1,16 +1,18 @@
 <template>
-  <section class="container mx-auto overflow-hidden my-5">
-    <Hooper style="height: auto" :settings="hooperSettings">
-      <Slide v-for="(loc, index) in data" :index="index" :key="loc.city">
-        <NearLocationCard
-          class="m-1"
-          :city="loc.city"
-          :distance="loc.time"
-          :image="loc.img"
-        />
-      </Slide>
-    </Hooper>
-  </section>
+  <client-only>
+    <section class="container mx-auto overflow-hidden my-5">
+      <Hooper style="height: auto" :settings="hooperSettings">
+        <Slide v-for="(loc, index) in data" :index="index" :key="loc.city">
+          <NearLocationCard
+            class="m-1"
+            :city="loc.city"
+            :distance="loc.time"
+            :image="loc.img"
+          />
+        </Slide>
+      </Hooper>
+    </section>
+  </client-only>
 </template>
 
 <script>

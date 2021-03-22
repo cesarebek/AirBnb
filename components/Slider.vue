@@ -1,16 +1,18 @@
 <template>
-  <section class="container mx-auto overflow-hidden my-5">
-    <Hooper style="height: auto" :settings="hooperSettings">
-      <Slide v-for="exp in data" :key="exp.title"
-        ><BigCard
-          class="m-1"
-          :type="exp.title"
-          :subtitle="exp.subtitle"
-          :image="exp.img"
-        />
-      </Slide>
-    </Hooper>
-  </section>
+  <client-only>
+    <section class="container mx-auto overflow-hidden my-5">
+      <Hooper style="height: auto" :settings="hooperSettings">
+        <Slide v-for="exp in data" :key="exp.title"
+          ><BigCard
+            class="m-1"
+            :type="exp.title"
+            :subtitle="exp.subtitle"
+            :image="exp.img"
+          />
+        </Slide>
+      </Hooper>
+    </section>
+  </client-only>
 </template>
 
 <script>
