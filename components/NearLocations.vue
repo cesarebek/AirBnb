@@ -1,14 +1,17 @@
 <template>
   <div class="container mx-auto px-5 mt-9">
     <p class="text-3xl font-bold">Esplora i dintorni</p>
-    <div class="my-5 grid grid-cols-2 md:grid-cols-3 gap-4">
-      <NearLocationCard
-        v-for="location in locations"
-        :key="location.city"
-        :image="location.img"
-        :city="location.city"
-        :distance="location.time"
-      />
+    <LocationsSlider class="md:hidden" :data="locations" />
+    <div class="hidden md:block">
+      <div class="my-5 grid md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <NearLocationCard
+          v-for="location in locations"
+          :key="location.city"
+          :image="location.img"
+          :city="location.city"
+          :distance="location.time"
+        />
+      </div>
     </div>
   </div>
 </template>

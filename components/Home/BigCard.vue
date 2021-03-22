@@ -1,6 +1,6 @@
 <template>
   <div class="cursor-pointer">
-    <div class="overflow-hidden rounded-xl mb-2">
+    <div class="overflow-hidden w- rounded-xl mb-2">
       <img :src="image" alt="House" />
     </div>
     <p class="text-gray-900 font-semibold text-lg">{{ type }}</p>

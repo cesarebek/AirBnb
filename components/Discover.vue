@@ -1,14 +1,17 @@
 <template>
   <section class="container mx-auto my-5 px-5">
     <p class="text-3xl font-bold ">Una casa ovunque nel mondo</p>
-    <div class="my-5 lg:flex gap-4 justify-between grid grid-cols-2">
-      <BigCard
-        v-for="experience in experiences"
-        :key="experience.title"
-        :type="experience.title"
-        :image="experience.img"
-        :subtitle="experience.subtitle"
-      />
+    <Slider class="md:hidden" :data="experiences" />
+    <div class="hidden md:block">
+      <div class="my-5 flex gap-4 justify-between">
+        <BigCard
+          v-for="experience in experiences"
+          :key="experience.title"
+          :type="experience.title"
+          :image="experience.img"
+          :subtitle="experience.subtitle"
+        />
+      </div>
     </div>
   </section>
 </template>
